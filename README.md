@@ -1,5 +1,3 @@
-# my-website
-My Website
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +28,46 @@ My Website
         <section id="about">
             <h1>About Us</h1>
             <p>My Name Is Ramat Isah Umar, From Bauchi State University Gadau Departmen of Mathematical Scince. 200Level Student .</p>
-            <img src="me.jpg" alt="Ramat Isah Umar Matric pic" width="150" height="200" >
+            <link rel="stylesheet" href="style.css">
+    <style>
+        .image-container {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            margin: 40px auto;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            clip-path: inset(0 0 0 0);
+            animation: cycle-crop 10s infinite;
+        }
+
+        @keyframes cycle-crop {
+            0% {
+                clip-path: inset(0 0 0 0);
+            }
+            25% {
+                clip-path: inset(20% 0 0 0);
+            }
+            50% {
+                clip-path: inset(0 20% 0 0);
+            }
+            75% {
+                clip-path: inset(0 0 20% 0);
+            }
+            100% {
+                clip-path: inset(0 0 0 20%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="me.jpg" alt="student profile">
+    </div><img src="mejpg" alt="Ramat Isah Umar Matric pic" width="190" height="200" >
         </section>
         <section id="contact">
             <h1>Get in Touch</h1>
